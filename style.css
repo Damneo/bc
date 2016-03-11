@@ -1,0 +1,30 @@
+#games {
+
+	text-align: center;
+	border-collapse:collapse;
+    width: 60%;
+	margin: auto;
+}
+
+#games tr {
+
+	border: 1px solid #000;
+}
+
+#games tr.green {
+
+	background: #CFFFCD;
+}
+#games tr.orange {
+
+	background: #FFBF7C;
+}
+#games tr.red {
+
+	background: #FF8E8E;
+}
+
+#games tr td, #games tr th {
+
+	border-right: 1px solid #000;
+}
