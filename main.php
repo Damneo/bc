@@ -2,9 +2,8 @@
 	include("simple_html_dom.php");
 
 
-	function getInfos() {
+	function getInfos($date) {
 
-		$date = "11%2F03%2F2016";
 		$url = "https://www.betclic.fr/calendrier-0?From=".$date."&SortBy=HighestOdds&Live=false&MultipleBoost=true&MultipleBoost=false&Competitions.Selected=1-0&StartIndex=0&Search=";
 		$content = file_get_html($url);
 

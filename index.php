@@ -1,6 +1,15 @@
 <?php
 	include("main.php");
-	$games = getInfos();
+
+	if (isset($_GET['date'])) {
+
+		$date = str_replace(".", "%2F", $_GET['date']);
+	} else {
+
+		$date = date("d%2Fm%2FY");
+	}
+
+	$games = getInfos($date);
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +20,11 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<form action="/" method="GET">
+		Date (dd.mm.YYYY) : <input type="text" name="date" id="" value="<?php echo $_GET['date'];?>">
+		<input type="submit" value="Ok">
+	</form>
+	<br>
 	<?php displayTable($games, "games");?>
 </body>
 </html>
