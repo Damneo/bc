@@ -60,9 +60,9 @@
 			echo "<td>".$game["date"]."</td>";
 			echo "<td>".$game["team1"]."</td>";
 			echo "<td>".$game["team2"]."</td>";
-			echo "<td>".$game["win1"]."</td>";
+			echo "<td class='".isCoteMin($game["win1"],$game["win1"],$game["win2"])."'>".$game["win1"]."</td>";
 			echo "<td>".$game["draw"]."</td>";
-			echo "<td>".$game["win2"]."</td>";
+			echo "<td class='".isCoteMin($game["win2"],$game["win1"],$game["win2"])."'>".$game["win2"]."</td>";
 			echo "<td>".$game["diff"]."</td>";
 			echo "<td>".round($coteCumulee, 2)."</td>";
 			echo"</tr>";
@@ -93,4 +93,12 @@
 
 			return "";
 		}
+	}
+
+	function isCoteMin($currentCote, $cote1, $cote2) {
+
+		if ($currentCote == min($cote1,$cote2))
+			return "bold";
+		else
+			return "";
 	}

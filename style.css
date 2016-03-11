@@ -1,3 +1,7 @@
+body {
+	font-family: Arial;
+}
+
 #games {
 
 	text-align: center;
@@ -27,4 +31,9 @@
 #games tr td, #games tr th {
 
 	border-right: 1px solid #000;
+}
+
+#games tr td.bold {
+
+	font-weight: bold;
 }
